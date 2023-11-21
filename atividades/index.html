@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script 1</title>
+</head>
+<body>
+    <h1>Calcular clientes</h1>
+
+    <label for="numClientes">Total de Clientes:</label>
+    <input type="number" id="numClientes" placeholder="Informe o número de clientes"><br>
+
+    <label for="valorFinalConta">Valor final da Conta:</label>
+    <input type="number" id="valorFinalConta" placeholder="Informe o valor total da conta"><br>
+
+    <button onclick="calcularConta()">Resultado</button>
+
+    <h2>Resultado:</h2>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularConta() {
+            var numClientes = document.getElementById('numClientes').value;
+            var valorFinalConta = document.getElementById('valorFinalConta').value;
+
+            if (numClientes && valorFinalConta) {
+                var valorPorCliente = valorFinalConta / numClientes;
+                document.getElementById('resultado').innerText = "Cada cliente deve pagar: R$ " + valorPorCliente.toFixed(2);
+            } else {
+            }
+        }
+    </script>
+</body>
+</html>

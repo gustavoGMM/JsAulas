@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucessor e Antecessor</title>
+</head>
+<body>
+    <h1>Sucessor e Antecessor</h1>
+
+    <label for="numero">Digite um Número:</label>
+    <input type="number" id="numero" placeholder="Digite um número"><br>
+
+    <button onclick="mostrarSucessorAntecessor()">Mostrar</button>
+
+    <h2>Resultado:</h2>
+    <p id="resultadoSucessorAntecessor"></p>
+
+    <script>
+        function mostrarSucessorAntecessor() {
+            var numeroDigitado = document.getElementById('numero').value;
+
+            if (numeroDigitado) {
+                var antecessor = parseInt(numeroDigitado) - 1;
+                var sucessor = parseInt(numeroDigitado) + 1;
+
+                document.getElementById('resultadoSucessorAntecessor').innerText = "Antecessor: " + antecessor + ", Número Digitado: " + numeroDigitado + ", Sucessor: " + sucessor;
+            } else {
+                document.getElementById('resultadoSucessorAntecessor').innerText = "Por favor, digite um número.";
+            }
+        }
+    </script>
+</body>
+</html>
