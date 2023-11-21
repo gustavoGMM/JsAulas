@@ -1,11 +1,22 @@
-function calcularConta() {
-    var numClientes = prompt("Número de Clientes:");
-    var valorConta = prompt("Valor Total da Conta:");
+const readline = require('readline');
 
-    if (numClientes && valorConta) {
-        var valorPorCliente = valorConta / numClientes;
-        alert("Cada cliente deve pagar: R$ " + valorPorCliente.toFixed(2));
-    } else {
-        alert("preencha todos os campos.");
-    }
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function calcularConta() {
+  rl.question('Número de Clientes: ', (numClientes) => {
+    rl.question('Total da Conta: ', (valorConta) => {
+      if (numClientes && valorConta) {
+        const valorPorCliente = parseFloat(valorConta) / parseInt(numClientes);
+        console.log(`os clientes vao pagar: R$ ${valorPorCliente.toFixed(2)}`);
+      } else {
+        
+      }
+      rl.close();
+    });
+  });
 }
+
+calcularConta();
