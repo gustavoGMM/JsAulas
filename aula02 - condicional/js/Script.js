@@ -23,8 +23,17 @@ if(true){
 var idade = Number(prompt("Qual é a sua idade?"));
 
 if(idade >= 18){
-    alert("Seja bem vindo");
+   alert("Seja bem vindo");
+}else{
+
+if(idade == 0){
+    alert("Idade invalida , tente novamente!");
+    location.reload();
 }else{     
      alert("Voce nao tem autorizaçao pra entrar no site");
      location.href = "https://www.google.com.br/";
+     }
+     // location.reload();
 }
+
+// condição ? bloco : bloco2 if ternario
