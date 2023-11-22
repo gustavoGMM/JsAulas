@@ -30,3 +30,9 @@ switch(operador){
 }
 
 alert(`O resultado da operação é ${resultado}`);
+
+var novoCalculo = confirm("Deseja fazer um novo")
+
+if(novoCalculo == true){
+    location.reload();
+}
