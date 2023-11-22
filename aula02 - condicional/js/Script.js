@@ -37,3 +37,4 @@ if(idade == 0){
 }
 
 // condição ? bloco : bloco2 if ternario
+// x > 10 ? 
