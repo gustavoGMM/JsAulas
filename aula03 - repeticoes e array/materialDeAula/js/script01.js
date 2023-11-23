@@ -24,5 +24,12 @@ estoqueProdutos.unshift("Refrigerante");
 console.log(estoqueProdutos);
 // pop - remover um elemento na ultima posicao
 estoqueProdutos.pop()
+console.log(estoqueProdutos);
+// shit - remove o primeiro elemento de um array
+estoqueProdutos.shift();
+console.log(estoqueProdutos);
+//splice - (indice, quanto indices, novo elemento)
+estoqueProdutos.splice(1,0,"chocolate");
+
 // length - quantidade de elementos array
 console.log(`Existem ${estoqueProdutos.lengt} no estoque`)
