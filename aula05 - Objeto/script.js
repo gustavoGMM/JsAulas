@@ -14,7 +14,6 @@ class Cliente{
     conta;
     agencia;
     saldo;
-    sacar();
    // secar();
    // depositar();
 }
