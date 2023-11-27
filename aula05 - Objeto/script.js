@@ -10,7 +10,7 @@
 class Cliente{
     nome;
     dataDeNascimento;
-    cfp;
+    cpf;
     conta;
     agencia;
     saldo;
@@ -42,7 +42,7 @@ consultarSaldo(){
 var cliente1 = new Cliente();
 cliente1.nome = "Leonardo";
 cliente1.dataDeNascimento = "25/02/1998";
-cliente1.cfp = 99999;
+cliente1.cpf = 99999;
 cliente1.conta = "001";
 cliente1.agencia = "x001";
 cliente1.saldo = 0;

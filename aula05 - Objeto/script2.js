@@ -11,7 +11,7 @@ class Curso{
     constructor(valorNome,valorDuraçao,ValorTipo){
         this.nome = valorNome;
         this.duraçao = valorDuraçao;
-        this.turma = ValorTipo;
+        this.tipo = ValorTipo;
     }
    
 }
@@ -21,3 +21,4 @@ var curso2 = new Curso("Java",400,"Tecnologia");
 var aluno1 = new Aluno("Leandro", 25, curso1);
 var aluno2 = new Aluno("Alice", 20, curso2);
 
+// atributo privativo = apenas o objeto em si poderá mudar seus valores, nao aceitando um reatribuiçao fora de seu objeto
