@@ -11,7 +11,13 @@ function mudarCor() {
     mensagem.value.innerHTML = "Digite uma senha com mais de 3 digitos "
 }
 function mudarCorVerifica() {
-    input.style.backgroundColor = "green";
+    let inputValor = input.value;
+    if ( inputValor < 3){
+        input.style.backgroundColor = "red";
+    }else{
+        input.style.backgroundColor = "green";
+    }
+    
 }
 // pegar a quantidade de caracteres
 // verificaar se tem 3 ou mais para verde
