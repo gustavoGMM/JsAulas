@@ -1,24 +1,25 @@
 //pegar input
 var input = document.querySelector("#inputText");
-var mensagem = document.querySelector("#mensagem");
-// add evento foco e perder foco 
-input.addEventListener("focus", mudarCor);
-input.addEventListener("blur", mudarCorVerifica);
-// fazer o input ficar amarelo qunado selecinado
-function mudarCor() {
+// add evento foco e perder foco
+input.addEventListener("focus", mudaCor);
+input.addEventListener("blur", mudaCorVerifica);
+// fazer o input ficar amarelo quando selecionado
+function mudaCor() {
     let mensagem = document.querySelector("#mensagem");
-    input.style.backgroundColor = "yeloow";
-    mensagem.value.innerHTML = "Digite uma senha com mais de 3 digitos "
+    input.style.backgroundColor = "yellow";
+    mensagem.innerHTML = "Digite uma senha com mais de 3 digitos!";
 }
-function mudarCorVerifica() {
-    let inputValor = input.value;
+function mudaCorVerifica() {
+    let inputValor = input.value.length;
+    let mensagem = document.querySelector("#mensagem");
     if ( inputValor < 3){
         input.style.backgroundColor = "red";
-    }else{
+        mensagem.innerHTML = "Digite uma senha válida!";
+    }else {
         input.style.backgroundColor = "green";
+        mensagem.innerHTML = "Senha atinge os requisitos!";
     }
-    
 }
 // pegar a quantidade de caracteres
-// verificaar se tem 3 ou mais para verde
-// vereficar se menos qie 3 para vermelho
+// verificar se tem 3 ou mais para verde
+// verfificar se menos que 3 para vermelho
