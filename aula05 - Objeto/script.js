@@ -14,7 +14,17 @@ class Cliente{
     conta;
     agencia;
     saldo;
-   // secar();
+    secar(valor){
+       // saldo -= valor;
+       // this.atriduto => atributo da class
+       if (this.saldo >= valor){
+       this.saldo = this.saldo - valor;
+        return valor;
+     }else{ 
+         return "Operaçao nao autorizada! Ta quebrado hein ;-;!";
+    }
+
+    };
    // depositar();
 }
 
@@ -24,4 +34,8 @@ cliente1.dataDeNascimento = "25/02/1998";
 cliente1.cfp = 99999;
 cliente1.conta = "001";
 cliente1.agencia = "x001";
-cliente1.saldo = 100;
+cliente1.saldo = 0;
+
+console.log(cliente1);
+
+var cliente2 = new Cliente();
