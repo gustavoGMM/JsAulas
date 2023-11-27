@@ -32,13 +32,12 @@ class Cliente{
    }else{ 
        return "Operaçao nao autorizada! Faça um deposito de pelo menos R$0,01";
    }
-
   };
 consultarSaldo(){
     return "O saldo da conta é de : R$ "+this.saldo;
   }
 
- }
+}
 
 var cliente1 = new Cliente();
 cliente1.nome = "Leonardo";
@@ -51,6 +50,7 @@ cliente1.saldo = 0;
 console.log(cliente1);
 
 var cliente2 = new Cliente();
+
 
 cliente1.depositar(2000);
 cliente1.sacar(200);
