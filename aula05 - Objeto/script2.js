@@ -1,24 +1,24 @@
-class Aluno{
+class Aluno {
     constructor(valorNome,valorIdade,valorTurma){
         this.nome = valorNome;
         this.idade = valorIdade;
-        this.turma = valorTurma;
+        this.turma = valorTurma;        
     }
-   
 }
 
-class Curso{
-    constructor(valorNome,valorDuraçao,ValorTipo){
+class Qualificacao {
+    constructor(valorNome,valorDuracao, valorTipo){
         this.nome = valorNome;
-        this.duraçao = valorDuraçao;
-        this.tipo = ValorTipo;
+        this.duracao = valorDuracao;
+        this.tipo = valorTipo;        
     }
-   
 }
-var curso1 = new Curso("FRONT",220,"Tecnologia");
-var curso2 = new Curso("Java",400,"Tecnologia");
+
+var curso1 = new Qualificacao("FRONT",220,"Tecnologia");
+var curso2 = new Qualificacao("Java",400,"Tecnologia");
+var curso3 = new Qualificacao("Culinária",100,"Alimentação");
 
 var aluno1 = new Aluno("Leandro", 25, curso1);
 var aluno2 = new Aluno("Alice", 20, curso2);
 
-// atributo privativo = apenas o objeto em si poderá mudar seus valores, nao aceitando um reatribuiçao fora de seu objeto
+// atributo privativo = apenas o objeto em si poderá mudar seus valores,não aceitando uma reatribuição fora de seu objeto
