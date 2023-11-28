@@ -29,11 +29,22 @@ var  btnCarro = document.querySelector("#btnCarro");
 btnCarro.addEventListener('click' , criarCarro);
 
 function criarCarro(){
-   let marca = document.querySelector("#marca").value;
-   let modelo = document.querySelector("#modelo").value;
-   let data = document.querySelector("#data").value;
-   let cor = document.querySelector("#cor").value;
-   let velicidadeMax = document.querySelector("#velocidadeMax").value;
-}
+   let marcaInput = document.querySelector("#marca").value;
+   let modeloInput = document.querySelector("#modelo").value;
+   let dataInput = document.querySelector("#data").value;
+   let corInput = document.querySelector("#cor").value;
+   let velicidadeMaxInput = document.querySelector("#velocidadeMax").value;
+   let resposta = document.querySelector("#resposta");
 
-var uno = new Carro("fiat","Uno mile",1998,"vermelho",190);
+
+var carro = new Carro(marcaInput,modeloInput,dataInput,corInput,velicidadeMaxInput);
+
+resposta.innerHTML = `<div class="post">
+<h3>${carro.modelo}</h3>
+<p>Marca : ${carro.marca}</P>
+<p>Data : ${carro.ano}</p>
+<p>Cor do carro : <span style="color:${carro.cor}">COR</span></p>
+<p>velocidade Max : ${carro.velicidadeMax}</p>
+</div>`;
+
+}
