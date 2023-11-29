@@ -42,3 +42,4 @@ function criarCarro(){
     <p>Cor do carro : <span style="color:${carro.cor}">COR</span></p>
     <p>Velocidade Max : ${carro.velocidadeMax}</p>
     </div>`;
+}
