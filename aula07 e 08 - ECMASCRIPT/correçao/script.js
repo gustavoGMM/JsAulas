@@ -9,6 +9,11 @@ const verificarPromise = new Promise((resove, reject) => {
     }
 });
 
-verificarPromise.catch((x) => {
-    console.log(x)
+verificarPromise.then(() => {
+    alert("Usuário encontrado! Seja bem vindo administrador");
+})
+
+verificarPromise.catch(() => {
+    if(nome == "" )
+    alert("Erro! Usuário não cadastrado!");
 })
