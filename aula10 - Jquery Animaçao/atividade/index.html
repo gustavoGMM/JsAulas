@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page</title>
+    
+    <script src="/jquery-3.7.1.js"></script>
+</head>
+<body style="font-family: 'Arial', sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
+
+    <div class="navbar" style="background-color: #333; padding: 15px; color: white; text-align: center; position: fixed; width: 100%; top: 0; z-index: 1000;">
+        <a href="#" onclick="showSection('section1')" style="color: rgb(60, 243, 4); padding: 14px 16px; text-decoration: none; display: inline-block; cursor: pointer;">Section 1</a>
+        <a href="#" onclick="showSection('section2')" style="color: rgb(10, 25, 236); padding: 14px 16px; text-decoration: none; display: inline-block; cursor: pointer;">Section 2</a>
+        <a href="#" onclick="showSection('section3')" style="color: rgb(230, 7, 7); padding: 14px 16px; text-decoration: none; display: inline-block; cursor: pointer;">Section 3</a>
+    </div>
+
+    <section id="section1" style="display: none; text-align: center; padding: 50px; background-color: #f0f0f0;">
+        <h1>Seção 1</h1>
+        <p>Conteúdo 1.</p>
+    </section>
+
+    <section id="section2" style="display: none; text-align: center; padding: 50px; background-color: #e0e0e0;">
+        <h1>Seção 2</h1>
+        <p>Conteúdo 2.</p>
+    </section>
+
+    <section id="section3" style="display: none; text-align: center; padding: 50px; background-color: #d0d0d0;">
+        <h1>Seção 3</h1>
+        <p>Conteúdo 3.</p>
+    </section>
+
+    <script>
+        // Função para exibir a seção desejada e ocultar as outras
+        function showSection(sectionId) {
+            // Oculta todas as seções
+            $('section').hide();
+            // Exibe apenas a seção desejada
+            $('#' + sectionId).show();
+        }
+    </script>
+
+</body>
+</html>
