@@ -3,67 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuada e Tema</title>
+    <title>Tabuada e Alternar Tema</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            transition: background-color 0.5s, color 0.5s;
-            padding: 20px;
+            background-color: lightgray;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .tabuada-result {
-            margin-top: 20px;
-        }
-
-        .dark-mode {
-            background-color: #222;
-            color: #fff;
+        .dark-theme {
+            background-color: #333;
+            color: white;
         }
     </style>
-    <script src="/java/jquery-3.7.1.js"></script>
 </head>
 <body>
 
-<div class="container">
-    <h1>Tabuada</h1>
-    <label for="tabuada">Escolha a tabuada (1-10): </label>
-    <select id="tabuada">
-        
-        <?php for ($i = 1; $i <= 10; $i++) : ?>
-            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-        <?php endfor; ?>
-    </select>
+    <button onclick="calcularTabuada()">Calcular Tabuada</button>
+    <button onclick="toggleTheme()">Toggle Theme</button>
 
-    <button id="calcular">Calcular</button>
-
-    <div class="tabuada-result"></div>
-
-    <button id="toggle-theme">Toggle Theme</button>
-</div>
-
-<script>
-    $(document).ready(function () {
-        
-        $('#calcular').click(function () {
-            var tabuadaSelecionada = $('#tabuada').val();
-            var resultado = '';
-            for (var i = 1; i <= 10; i++) {
-                resultado += `${tabuadaSelecionada} x ${i} = ${tabuadaSelecionada * i}<br>`;
-            }
-            $('.tabuada-result').html(resultado);
-        });
-
-        
-        $('#toggle-theme').click(function () {
-            $('body').toggleClass('dark-mode');
-        });
-    });
-</script>
-
+    <script src="/java/atividade/script.js"></script>
 </body>
 </html>
