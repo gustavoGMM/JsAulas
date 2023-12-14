@@ -8,11 +8,14 @@ btnCep.addEventListener("click", consultar);
 
 function consultar(){
     var cep = document.querySelector("#cep").value;
-
-    const Api = fetch(`https://viacep.com.br/ws/72241116/json/`).then(res => {
+    
+    if(cep.length < 8 || cep.length > 9){
+        alert("Erro! Cep inválido!");
+    }else{ 
+         fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => {
     return res.json();
 }).then(dados => {
-    let resposta = querySelector("#resposta");
+    let resposta = document.querySelector("#resposta");
     resposta.innerHTML += `
     <h1>Informações sobre o cep</h1>
     CEP : ${dados.cep}<br>
