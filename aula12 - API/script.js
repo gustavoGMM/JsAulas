@@ -13,7 +13,7 @@ function consultar(){
     return res.json();
 }).then(dados => {
     let resposta = querySelector("#resposta");
-    resposta.innerHTML +=  `
+    resposta.innerHTML += `
     <h1>Informações sobre o cep</h1>
     CEP : ${dados.cep}<br>
     BAIRRO : ${dados.bairro}<br>
